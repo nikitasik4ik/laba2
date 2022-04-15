@@ -1,0 +1,18 @@
+CREATE TABLE [dbo].[Course] (
+    [Id]           INT NOT NULL,
+    [FacultyId]    INT NOT NULL,
+    [CourseNumber] INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_Course_Faculty] FOREIGN KEY ([FacultyId]) REFERENCES [dbo].[Faculty] ([Id]) ON DELETE CASCADE
+);
+
+CREATE TABLE [dbo].[Faculty] (
+    [Id]   INT          NOT NULL,
+    [Name] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+CREATE TABLE [dbo].[Faculty] (
+    [Id]   INT          NOT NULL,
+    [Name] VARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
